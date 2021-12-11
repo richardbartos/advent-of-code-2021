@@ -1,12 +1,13 @@
 input = []
-with open('inputDay6.txt', 'r') as fh:
+with open('data/inputDay6.txt', 'r') as fh:
     for line in fh.readlines():
-        line = line.strip() 
+        line = line.strip()
         line = line.split(",")
         for x in line:
             input.append(int(x))
 
-print("Initial state:",input)
+print("Initial state:", input)
+
 
 def runLanternfishOrgy(numberOfDays):
     day = 1
@@ -18,7 +19,7 @@ def runLanternfishOrgy(numberOfDays):
             else:
                 input[i] -= 1
         day += 1
-    print("Total number of fish:",len(input))
-        
+    print("Total number of fish:", len(input))
 
-runLanternfishOrgy(256)
+
+runLanternfishOrgy(80)
